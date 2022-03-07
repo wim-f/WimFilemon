@@ -3,9 +3,18 @@
 @section('title', 'Dashboard')
 
 @section('content')
-    <p>You're logged in!</p>
-    <h1>Hier staan wat mooie posts</h1>
-    <table class="table">
+    <p>You're logged in! Here are the posts.</p>
+    <table class="min-w-full table">
+        <thead>
+        <tr>
+            <th class="px-6 py-3 text-left text-gray-500 border-b border-gray-200 bg-gray-50">
+                Title
+            </th>
+            <th class="px-6 py-3 text-left text-gray-500 border-b border-gray-200 bg-gray-50">
+                Content
+            </th>
+        </tr>
+        </thead>
     <tbody class="bg-white">
     @foreach(App\Models\Post::all() as $post)
         <tr>
